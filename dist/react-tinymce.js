@@ -132,6 +132,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (!(0, _lodashLangIsEqual2['default'])(this.props.id, nextProps.id)) {
 	      this.id = nextProps.id;
 	    }
+	    if (!(0, _lodashLangIsEqual2['default'])(tinymce.EditorManager.get(this.id).getContent(), nextProps.content)) {
+	      tinymce.EditorManager.get(this.id).setContent(nextProps.content);
+	    }
 	  },
 	
 	  shouldComponentUpdate: function shouldComponentUpdate(nextProps) {
